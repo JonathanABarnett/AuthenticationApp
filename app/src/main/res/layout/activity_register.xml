@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Register">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/wallpaper" />
+
+    <TextView
+        android:id="@+id/authentication_title_textview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        android:textColor="#03DAC5"
+        android:gravity="center"
+        android:text="Authentication Firebase App" />
+
+    <TextView
+        android:id="@+id/authentication_register_textview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="#03DAC5"
+        android:gravity="center"
+        android:layout_below="@id/authentication_title_textview"
+        android:text="Register" />
+
+    <!-- EditText: Name -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/register_name_til"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="50dp"
+        android:textSize="20sp"
+        android:textColor="@android:color/white"
+        android:textColorHint="@android:color/white"
+        android:layout_below="@id/authentication_title_textview">
+
+        <EditText
+            android:id="@+id/register_name_edittext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textColor="@android:color/white"
+            android:inputType="textEmailAddress"
+            android:hint="Name" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- EditText: Email -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/register_email_til"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="15dp"
+        android:textSize="20sp"
+        android:textColor="@android:color/white"
+        android:textColorHint="@android:color/white"
+        android:layout_below="@id/register_name_til">
+
+        <EditText
+            android:id="@+id/register_email_edittext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textColor="@android:color/white"
+            android:inputType="textEmailAddress"
+            android:hint="Email" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- TextView: Password -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/register_password_til"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="15dp"
+            android:textSize="20sp"
+            android:textColor="@android:color/white"
+            android:textColorHint="@android:color/white"
+            android:layout_below="@id/register_email_til"
+            app:passwordToggleEnabled="true">
+
+            <EditText
+                android:id="@+id/register_password_edittext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:textSize="20sp"
+                android:textColor="@android:color/white"
+                android:textColorHint="@android:color/white"
+                android:hint="Password" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- TextView: Password -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/register_password_verify_til"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="15dp"
+        android:textSize="20sp"
+        android:textColor="@android:color/white"
+        android:textColorHint="@android:color/white"
+        android:layout_below="@id/register_password_til"
+        app:passwordToggleEnabled="true">
+
+        <EditText
+            android:id="@+id/register_password_verify_edittext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:textSize="20sp"
+            android:textColor="@android:color/white"
+            android:textColorHint="@android:color/white"
+            android:hint="Password" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Button: Register -->
+        <Button
+            android:id="@+id/register_register_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="Register"
+            android:layout_below="@id/register_password_verify_til"
+            style="@style/Base.Widget.AppCompat.Button.Colored"
+            android:drawableLeft="@drawable/ic_register"
+            android:drawablePadding="5dp"
+            android:layout_centerHorizontal="true"/>
+
+        <!-- TextView: Already Have Account -->
+        <TextView
+            android:id="@+id/register_login_textview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Already have an account? Login"
+            android:textSize="14sp"
+            android:textAlignment="center"
+            android:layout_below="@id/register_register_btn"
+            android:layout_marginTop="30dp"
+            android:textColor="@android:color/white" />
+
+</RelativeLayout>
